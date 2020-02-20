@@ -1,7 +1,3 @@
-plugins {
-	id 'org.springframework.boot' version '2.2.4.RELEASE'
-}
-
 dependencies {
 	implementation project(':pet-clinic-data')
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
