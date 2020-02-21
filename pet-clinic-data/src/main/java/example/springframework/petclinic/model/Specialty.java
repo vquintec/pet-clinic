@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Specialty {
+public class Specialty extends BaseEntity {
     private String name;
 }
