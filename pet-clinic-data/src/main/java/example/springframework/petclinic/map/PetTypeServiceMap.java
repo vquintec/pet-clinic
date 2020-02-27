@@ -7,5 +7,4 @@ import example.springframework.petclinic.services.PetTypeService;
 
 @Service
 public class PetTypeServiceMap extends AbstractMapService<PetType, Long> implements PetTypeService {
-
 }
