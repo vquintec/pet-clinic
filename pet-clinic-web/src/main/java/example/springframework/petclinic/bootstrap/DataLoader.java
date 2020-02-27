@@ -1,9 +1,12 @@
 package example.springframework.petclinic.bootstrap;
 
+import java.time.LocalDate;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import example.springframework.petclinic.model.Owner;
+import example.springframework.petclinic.model.Pet;
 import example.springframework.petclinic.model.PetType;
 import example.springframework.petclinic.model.Vet;
 import example.springframework.petclinic.services.OwnerService;
@@ -39,12 +42,34 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Valentin");
         owner1.setLastName("Quintero");
+        owner1.setAddress("Cra 29 # 43-38");
+        owner1.setCity("Medellín");
+        owner1.setTelephone("3022147255");
+        
+        Pet beto = new Pet();
+        beto.setType(savedDogPetType);
+        beto.setOwner(owner1);
+        beto.setName("Beto");
+        beto.setBirthDate(LocalDate.now());
+        
+        owner1.getPets().add(beto);
         
         ownerService.save(owner1);
         
         Owner owner2 = new Owner();
         owner2.setFirstName("Mariana");
         owner2.setLastName("Quintero");
+        owner2.setAddress("Cra 29 # 43-38");
+        owner2.setCity("Medellín");
+        owner2.setTelephone("3194587412");
+        
+        Pet kira = new Pet();
+        kira.setType(savedCatPetType);
+        kira.setOwner(owner2);
+        kira.setName("Kira");
+        kira.setBirthDate(LocalDate.now());
+        
+        owner2.getPets().add(kira);
         
         ownerService.save(owner2);
         

@@ -9,6 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Pet extends BaseEntity {
+    private String name;
     private LocalDate birthDate;
     private PetType type;
     private Owner owner;
