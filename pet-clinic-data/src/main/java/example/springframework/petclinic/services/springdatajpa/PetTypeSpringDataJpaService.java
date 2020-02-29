@@ -11,8 +11,8 @@ import example.springframework.petclinic.services.PetTypeService;
 @Profile("springdatajpa")
 public class PetTypeSpringDataJpaService extends AbstractSpringDataJpaService<PetType, Long, PetTypeRepository> implements PetTypeService {
 
-    public PetTypeSpringDataJpaService(PetTypeRepository objectRepository) {
-        super(objectRepository);
+    public PetTypeSpringDataJpaService(PetTypeRepository petTypeRepository) {
+        super(petTypeRepository);
     }
 
 }

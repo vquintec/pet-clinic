@@ -6,6 +6,6 @@ import example.springframework.petclinic.model.Specialty;
 import example.springframework.petclinic.services.SpecialtyService;
 
 @Service
-public class SpecialtyServiceMap extends AbstractMapService<Specialty, Long> implements SpecialtyService {
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
 
 }
